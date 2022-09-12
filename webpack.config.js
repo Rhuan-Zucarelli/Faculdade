@@ -34,10 +34,18 @@ module.exports = {
                 use: 'babel-loader'
             },
             {
-                test: [/\.css$/],
+                test: /\.css$/,
                 exclude: /node_modules/,
-                use: ['style-loader','css-loader'] 
-            }
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                exclude: /node_modules/,
+                use: [{
+                    loader: 'file-loader'
+                }]
+            },
+
         ]
     }
 
