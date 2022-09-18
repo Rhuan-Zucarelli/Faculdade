@@ -1,7 +1,7 @@
 import React from "react"
 import './styles.css'
 
-const Header = () => {
+const Header = (props) => {
     return(
         <header
             style={{
@@ -9,7 +9,7 @@ const Header = () => {
             }}
         >
             <div className="divHeader">
-                <h1>Cinema em casa</h1>
+                <h1>{props.Titulo}</h1>
             </div>
         </header>
     )
